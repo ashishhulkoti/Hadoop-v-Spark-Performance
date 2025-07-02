@@ -1,0 +1,23 @@
+root@datanode1:~# ./hashgen -t 16 -o 16 -i 16 -f data.bin -m 16384 -s 65536 -d false
+NUM_THREADS_HASH=16
+NUM_THREADS_SORT=16
+NUM_THREADS_WRITE=16
+FILENAME=data.bin
+MEMORY_SIZE=32768MB
+FILESIZE=65536MB
+RECORD_SIZE=16B
+HASH_SIZE=10B
+NONCE_SIZE=6B
+
+File generated successfully in 1387.142s
+
+root@datanode1:~# ./hashverify -d true -f data.bin -v true -d true
+DEBUG=true
+FILENAME=data.bin
+VERIFY_RECORDS=true
+DEBUG=true
+RECORD_SIZE=16
+HASH_SIZE=10
+NONCE_SIZE=6
+[37.228][VERIFY]: 100.00% completed, ETA 0.0 seconds, 65536 flushes, 1789.3 MB/sec
+Read 68719476736 bytes and found all records are sorted.

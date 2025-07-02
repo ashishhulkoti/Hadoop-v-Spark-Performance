@@ -1,0 +1,332 @@
+root@namenode:~# spark-submit SparkSort.py
+24/04/20 23:00:50 INFO SparkContext: Running Spark version 3.4.3
+24/04/20 23:00:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/04/20 23:00:50 INFO ResourceUtils: ==============================================================
+24/04/20 23:00:50 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/04/20 23:00:50 INFO ResourceUtils: ==============================================================
+24/04/20 23:00:50 INFO SparkContext: Submitted application: GenerateAndSortBlake3Hashes
+24/04/20 23:00:50 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/04/20 23:00:50 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+24/04/20 23:00:50 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/04/20 23:00:50 INFO SecurityManager: Changing view acls to: root
+24/04/20 23:00:50 INFO SecurityManager: Changing modify acls to: root
+24/04/20 23:00:50 INFO SecurityManager: Changing view acls groups to: 
+24/04/20 23:00:50 INFO SecurityManager: Changing modify acls groups to: 
+24/04/20 23:00:50 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+24/04/20 23:00:50 INFO Utils: Successfully started service 'sparkDriver' on port 44573.
+24/04/20 23:00:50 INFO SparkEnv: Registering MapOutputTracker
+24/04/20 23:00:50 INFO SparkEnv: Registering BlockManagerMaster
+24/04/20 23:00:50 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/04/20 23:00:50 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/04/20 23:00:50 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/04/20 23:00:50 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-ac6348b1-a4d9-42ff-afa4-4e9a3850850b
+24/04/20 23:00:50 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/04/20 23:00:50 INFO SparkEnv: Registering OutputCommitCoordinator
+24/04/20 23:00:50 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/04/20 23:00:50 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/04/20 23:00:51 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at namenode/10.244.231.159:8032
+24/04/20 23:00:51 INFO Configuration: resource-types.xml not found
+24/04/20 23:00:51 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+24/04/20 23:00:51 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+24/04/20 23:00:51 INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+24/04/20 23:00:51 INFO Client: Setting up container launch context for our AM
+24/04/20 23:00:51 INFO Client: Setting up the launch environment for our AM container
+24/04/20 23:00:51 INFO Client: Preparing resources for our AM container
+24/04/20 23:00:51 INFO Client: Uploading resource file:/usr/local/spark/python/lib/pyspark.zip -> hdfs://namenode:9000/user/root/.sparkStaging/application_1713651296860_0015/pyspark.zip
+24/04/20 23:00:51 INFO Client: Uploading resource file:/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip -> hdfs://namenode:9000/user/root/.sparkStaging/application_1713651296860_0015/py4j-0.10.9.7-src.zip
+24/04/20 23:00:52 INFO Client: Uploading resource file:/tmp/spark-f812c981-ad60-4ba6-b049-8d252af5ab26/__spark_conf__10107822861336644387.zip -> hdfs://namenode:9000/user/root/.sparkStaging/application_1713651296860_0015/__spark_conf__.zip
+24/04/20 23:00:52 INFO SecurityManager: Changing view acls to: root
+24/04/20 23:00:52 INFO SecurityManager: Changing modify acls to: root
+24/04/20 23:00:52 INFO SecurityManager: Changing view acls groups to: 
+24/04/20 23:00:52 INFO SecurityManager: Changing modify acls groups to: 
+24/04/20 23:00:52 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+24/04/20 23:00:52 INFO Client: Submitting application application_1713651296860_0015 to ResourceManager
+24/04/20 23:00:52 INFO YarnClientImpl: Submitted application application_1713651296860_0015
+24/04/20 23:00:53 INFO Client: Application report for application_1713651296860_0015 (state: ACCEPTED)
+24/04/20 23:00:53 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1713654052230
+	 final status: UNDEFINED
+	 tracking URL: http://namenode:8088/proxy/application_1713651296860_0015/
+	 user: root
+24/04/20 23:00:54 INFO Client: Application report for application_1713651296860_0015 (state: ACCEPTED)
+24/04/20 23:00:55 INFO Client: Application report for application_1713651296860_0015 (state: RUNNING)
+24/04/20 23:00:55 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 10.244.231.159
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1713654052230
+	 final status: UNDEFINED
+	 tracking URL: http://namenode:8088/proxy/application_1713651296860_0015/
+	 user: root
+24/04/20 23:00:55 INFO YarnClientSchedulerBackend: Application application_1713651296860_0015 has started running.
+24/04/20 23:00:55 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36161.
+24/04/20 23:00:55 INFO NettyBlockTransferService: Server created on namenode.lxd:36161
+24/04/20 23:00:55 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/04/20 23:00:55 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, namenode.lxd, 36161, None)
+24/04/20 23:00:55 INFO BlockManagerMasterEndpoint: Registering block manager namenode.lxd:36161 with 434.4 MiB RAM, BlockManagerId(driver, namenode.lxd, 36161, None)
+24/04/20 23:00:55 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, namenode.lxd, 36161, None)
+24/04/20 23:00:55 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, namenode.lxd, 36161, None)
+24/04/20 23:00:55 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> namenode, PROXY_URI_BASES -> http://namenode:8088/proxy/application_1713651296860_0015), /proxy/application_1713651296860_0015
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /jobs: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /jobs/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /jobs/job: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /stages: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /stages/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /stages/stage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /stages/pool: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /storage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /storage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /environment: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /environment/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /executors: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /executors/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /static: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /api: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+24/04/20 23:00:55 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+24/04/20 23:00:59 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.244.231.159:42536) with ID 2,  ResourceProfileId 0
+24/04/20 23:00:59 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.244.231.70:47290) with ID 1,  ResourceProfileId 0
+24/04/20 23:00:59 INFO BlockManagerMasterEndpoint: Registering block manager namenode.lxd:33879 with 434.4 MiB RAM, BlockManagerId(2, namenode.lxd, 33879, None)
+24/04/20 23:00:59 INFO BlockManagerMasterEndpoint: Registering block manager datanode1.lxd:42741 with 434.4 MiB RAM, BlockManagerId(1, datanode1.lxd, 42741, None)
+24/04/20 23:00:59 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+24/04/20 23:00:59 INFO SparkContext: Starting job: sortBy at /root/testSpark3.py:25
+24/04/20 23:00:59 INFO DAGScheduler: Got job 0 (sortBy at /root/testSpark3.py:25) with 16 output partitions
+24/04/20 23:00:59 INFO DAGScheduler: Final stage: ResultStage 0 (sortBy at /root/testSpark3.py:25)
+24/04/20 23:00:59 INFO DAGScheduler: Parents of final stage: List()
+24/04/20 23:00:59 INFO DAGScheduler: Missing parents: List()
+24/04/20 23:00:59 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[1] at sortBy at /root/testSpark3.py:25), which has no missing parents
+24/04/20 23:00:59 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 9.4 KiB, free 434.4 MiB)
+24/04/20 23:00:59 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 5.6 KiB, free 434.4 MiB)
+24/04/20 23:00:59 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on namenode.lxd:36161 (size: 5.6 KiB, free: 434.4 MiB)
+24/04/20 23:00:59 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1540
+24/04/20 23:00:59 INFO DAGScheduler: Submitting 16 missing tasks from ResultStage 0 (PythonRDD[1] at sortBy at /root/testSpark3.py:25) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/04/20 23:00:59 INFO YarnScheduler: Adding task set 0.0 with 16 tasks resource profile 0
+24/04/20 23:00:59 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (datanode1.lxd, executor 1, partition 0, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:00:59 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (namenode.lxd, executor 2, partition 1, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:00 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on namenode.lxd:33879 (size: 5.6 KiB, free: 434.4 MiB)
+24/04/20 23:01:00 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on datanode1.lxd:42741 (size: 5.6 KiB, free: 434.4 MiB)
+24/04/20 23:01:00 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (namenode.lxd, executor 2, partition 2, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:00 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 946 ms on namenode.lxd (executor 2) (1/16)
+24/04/20 23:01:00 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 36869
+24/04/20 23:01:00 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (datanode1.lxd, executor 1, partition 3, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:00 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1071 ms on datanode1.lxd (executor 1) (2/16)
+24/04/20 23:01:00 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (namenode.lxd, executor 2, partition 4, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:00 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 119 ms on namenode.lxd (executor 2) (3/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (namenode.lxd, executor 2, partition 5, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 107 ms on namenode.lxd (executor 2) (4/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (datanode1.lxd, executor 1, partition 6, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 126 ms on datanode1.lxd (executor 1) (5/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (namenode.lxd, executor 2, partition 7, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 96 ms on namenode.lxd (executor 2) (6/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (datanode1.lxd, executor 1, partition 8, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 122 ms on datanode1.lxd (executor 1) (7/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (namenode.lxd, executor 2, partition 9, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 92 ms on namenode.lxd (executor 2) (8/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (datanode1.lxd, executor 1, partition 10, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 112 ms on datanode1.lxd (executor 1) (9/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (namenode.lxd, executor 2, partition 11, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 92 ms on namenode.lxd (executor 2) (10/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (datanode1.lxd, executor 1, partition 12, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 121 ms on datanode1.lxd (executor 1) (11/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13) (namenode.lxd, executor 2, partition 13, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 92 ms on namenode.lxd (executor 2) (12/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14) (namenode.lxd, executor 2, partition 14, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 85 ms on namenode.lxd (executor 2) (13/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15) (datanode1.lxd, executor 1, partition 15, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 120 ms on datanode1.lxd (executor 1) (14/16)
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 101 ms on namenode.lxd (executor 2) (15/16)
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 102 ms on datanode1.lxd (executor 1) (16/16)
+24/04/20 23:01:01 INFO YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/04/20 23:01:01 INFO DAGScheduler: ResultStage 0 (sortBy at /root/testSpark3.py:25) finished in 1.891 s
+24/04/20 23:01:01 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/04/20 23:01:01 INFO YarnScheduler: Killing all running tasks in stage 0: Stage finished
+24/04/20 23:01:01 INFO DAGScheduler: Job 0 finished: sortBy at /root/testSpark3.py:25, took 1.949428 s
+24/04/20 23:01:01 INFO SparkContext: Starting job: sortBy at /root/testSpark3.py:25
+24/04/20 23:01:01 INFO DAGScheduler: Got job 1 (sortBy at /root/testSpark3.py:25) with 16 output partitions
+24/04/20 23:01:01 INFO DAGScheduler: Final stage: ResultStage 1 (sortBy at /root/testSpark3.py:25)
+24/04/20 23:01:01 INFO DAGScheduler: Parents of final stage: List()
+24/04/20 23:01:01 INFO DAGScheduler: Missing parents: List()
+24/04/20 23:01:01 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[2] at sortBy at /root/testSpark3.py:25), which has no missing parents
+24/04/20 23:01:01 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 8.1 KiB, free 434.4 MiB)
+24/04/20 23:01:01 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.0 KiB, free 434.4 MiB)
+24/04/20 23:01:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on namenode.lxd:36161 (size: 5.0 KiB, free: 434.4 MiB)
+24/04/20 23:01:01 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1540
+24/04/20 23:01:01 INFO DAGScheduler: Submitting 16 missing tasks from ResultStage 1 (PythonRDD[2] at sortBy at /root/testSpark3.py:25) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/04/20 23:01:01 INFO YarnScheduler: Adding task set 1.0 with 16 tasks resource profile 0
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 16) (datanode1.lxd, executor 1, partition 0, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 17) (namenode.lxd, executor 2, partition 1, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on namenode.lxd:33879 (size: 5.0 KiB, free: 434.4 MiB)
+24/04/20 23:01:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on datanode1.lxd:42741 (size: 5.0 KiB, free: 434.4 MiB)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 18) (namenode.lxd, executor 2, partition 2, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 17) in 112 ms on namenode.lxd (executor 2) (1/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 19) (datanode1.lxd, executor 1, partition 3, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 16) in 142 ms on datanode1.lxd (executor 1) (2/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 20) (namenode.lxd, executor 2, partition 4, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 18) in 104 ms on namenode.lxd (executor 2) (3/16)
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 19) in 95 ms on datanode1.lxd (executor 1) (4/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 21) (datanode1.lxd, executor 1, partition 5, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 22) (namenode.lxd, executor 2, partition 6, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:01 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 20) in 100 ms on namenode.lxd (executor 2) (5/16)
+24/04/20 23:01:01 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 23) (datanode1.lxd, executor 1, partition 7, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 21) in 99 ms on datanode1.lxd (executor 1) (6/16)
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 24) (namenode.lxd, executor 2, partition 8, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 22) in 101 ms on namenode.lxd (executor 2) (7/16)
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 25) (datanode1.lxd, executor 1, partition 9, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 23) in 110 ms on datanode1.lxd (executor 1) (8/16)
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 26) (datanode1.lxd, executor 1, partition 10, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 25) in 97 ms on datanode1.lxd (executor 1) (9/16)
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 11.0 in stage 1.0 (TID 27) (namenode.lxd, executor 2, partition 11, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 24) in 145 ms on namenode.lxd (executor 2) (10/16)
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 12.0 in stage 1.0 (TID 28) (datanode1.lxd, executor 1, partition 12, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 26) in 110 ms on datanode1.lxd (executor 1) (11/16)
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 13.0 in stage 1.0 (TID 29) (namenode.lxd, executor 2, partition 13, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 11.0 in stage 1.0 (TID 27) in 100 ms on namenode.lxd (executor 2) (12/16)
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 14.0 in stage 1.0 (TID 30) (namenode.lxd, executor 2, partition 14, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 13.0 in stage 1.0 (TID 29) in 87 ms on namenode.lxd (executor 2) (13/16)
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 15.0 in stage 1.0 (TID 31) (datanode1.lxd, executor 1, partition 15, PROCESS_LOCAL, 7354 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 12.0 in stage 1.0 (TID 28) in 101 ms on datanode1.lxd (executor 1) (14/16)
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 14.0 in stage 1.0 (TID 30) in 95 ms on namenode.lxd (executor 2) (15/16)
+24/04/20 23:01:02 INFO TaskSetManager: Finished task 15.0 in stage 1.0 (TID 31) in 96 ms on datanode1.lxd (executor 1) (16/16)
+24/04/20 23:01:02 INFO YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/04/20 23:01:02 INFO DAGScheduler: ResultStage 1 (sortBy at /root/testSpark3.py:25) finished in 0.847 s
+24/04/20 23:01:02 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+24/04/20 23:01:02 INFO YarnScheduler: Killing all running tasks in stage 1: Stage finished
+24/04/20 23:01:02 INFO DAGScheduler: Job 1 finished: sortBy at /root/testSpark3.py:25, took 0.853825 s
+24/04/20 23:01:02 INFO SparkContext: Starting job: take at SerDeUtil.scala:204
+24/04/20 23:01:02 INFO DAGScheduler: Registering RDD 4 (sortBy at /root/testSpark3.py:25) as input to shuffle 0
+24/04/20 23:01:02 INFO DAGScheduler: Got job 2 (take at SerDeUtil.scala:204) with 1 output partitions
+24/04/20 23:01:02 INFO DAGScheduler: Final stage: ResultStage 3 (take at SerDeUtil.scala:204)
+24/04/20 23:01:02 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+24/04/20 23:01:02 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+24/04/20 23:01:02 INFO DAGScheduler: Submitting ShuffleMapStage 2 (PairwiseRDD[4] at sortBy at /root/testSpark3.py:25), which has no missing parents
+24/04/20 23:01:02 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 10.4 KiB, free 434.4 MiB)
+24/04/20 23:01:02 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 6.7 KiB, free 434.4 MiB)
+24/04/20 23:01:02 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on namenode.lxd:36161 (size: 6.7 KiB, free: 434.4 MiB)
+24/04/20 23:01:02 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1540
+24/04/20 23:01:02 INFO DAGScheduler: Submitting 16 missing tasks from ShuffleMapStage 2 (PairwiseRDD[4] at sortBy at /root/testSpark3.py:25) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/04/20 23:01:02 INFO YarnScheduler: Adding task set 2.0 with 16 tasks resource profile 0
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 32) (namenode.lxd, executor 2, partition 0, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:02 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 33) (datanode1.lxd, executor 1, partition 1, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:02 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on namenode.lxd:33879 (size: 6.7 KiB, free: 434.4 MiB)
+24/04/20 23:01:02 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on datanode1.lxd:42741 (size: 6.7 KiB, free: 434.4 MiB)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 34) (namenode.lxd, executor 2, partition 2, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 32) in 395 ms on namenode.lxd (executor 2) (1/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 35) (datanode1.lxd, executor 1, partition 3, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 33) in 424 ms on datanode1.lxd (executor 1) (2/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 36) (namenode.lxd, executor 2, partition 4, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 34) in 107 ms on namenode.lxd (executor 2) (3/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 37) (datanode1.lxd, executor 1, partition 5, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 35) in 128 ms on datanode1.lxd (executor 1) (4/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 6.0 in stage 2.0 (TID 38) (namenode.lxd, executor 2, partition 6, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 36) in 100 ms on namenode.lxd (executor 2) (5/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 7.0 in stage 2.0 (TID 39) (datanode1.lxd, executor 1, partition 7, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 5.0 in stage 2.0 (TID 37) in 117 ms on datanode1.lxd (executor 1) (6/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 8.0 in stage 2.0 (TID 40) (namenode.lxd, executor 2, partition 8, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 6.0 in stage 2.0 (TID 38) in 110 ms on namenode.lxd (executor 2) (7/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 9.0 in stage 2.0 (TID 41) (datanode1.lxd, executor 1, partition 9, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 7.0 in stage 2.0 (TID 39) in 125 ms on datanode1.lxd (executor 1) (8/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 10.0 in stage 2.0 (TID 42) (namenode.lxd, executor 2, partition 10, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 8.0 in stage 2.0 (TID 40) in 99 ms on namenode.lxd (executor 2) (9/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 11.0 in stage 2.0 (TID 43) (datanode1.lxd, executor 1, partition 11, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 9.0 in stage 2.0 (TID 41) in 104 ms on datanode1.lxd (executor 1) (10/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 12.0 in stage 2.0 (TID 44) (namenode.lxd, executor 2, partition 12, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 10.0 in stage 2.0 (TID 42) in 95 ms on namenode.lxd (executor 2) (11/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 13.0 in stage 2.0 (TID 45) (namenode.lxd, executor 2, partition 13, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 12.0 in stage 2.0 (TID 44) in 98 ms on namenode.lxd (executor 2) (12/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 14.0 in stage 2.0 (TID 46) (datanode1.lxd, executor 1, partition 14, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 11.0 in stage 2.0 (TID 43) in 121 ms on datanode1.lxd (executor 1) (13/16)
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 15.0 in stage 2.0 (TID 47) (namenode.lxd, executor 2, partition 15, PROCESS_LOCAL, 7343 bytes) 
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 13.0 in stage 2.0 (TID 45) in 101 ms on namenode.lxd (executor 2) (14/16)
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 14.0 in stage 2.0 (TID 46) in 121 ms on datanode1.lxd (executor 1) (15/16)
+24/04/20 23:01:03 INFO TaskSetManager: Finished task 15.0 in stage 2.0 (TID 47) in 120 ms on namenode.lxd (executor 2) (16/16)
+24/04/20 23:01:03 INFO YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+24/04/20 23:01:03 INFO DAGScheduler: ShuffleMapStage 2 (sortBy at /root/testSpark3.py:25) finished in 1.235 s
+24/04/20 23:01:03 INFO DAGScheduler: looking for newly runnable stages
+24/04/20 23:01:03 INFO DAGScheduler: running: Set()
+24/04/20 23:01:03 INFO DAGScheduler: waiting: Set(ResultStage 3)
+24/04/20 23:01:03 INFO DAGScheduler: failed: Set()
+24/04/20 23:01:03 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[10] at mapPartitions at SerDeUtil.scala:117), which has no missing parents
+24/04/20 23:01:03 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 11.8 KiB, free 434.3 MiB)
+24/04/20 23:01:03 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 6.4 KiB, free 434.3 MiB)
+24/04/20 23:01:03 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on namenode.lxd:36161 (size: 6.4 KiB, free: 434.4 MiB)
+24/04/20 23:01:03 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1540
+24/04/20 23:01:03 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[10] at mapPartitions at SerDeUtil.scala:117) (first 15 tasks are for partitions Vector(0))
+24/04/20 23:01:03 INFO YarnScheduler: Adding task set 3.0 with 1 tasks resource profile 0
+24/04/20 23:01:03 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 48) (namenode.lxd, executor 2, partition 0, NODE_LOCAL, 7738 bytes) 
+24/04/20 23:01:03 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on namenode.lxd:33879 (size: 6.4 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.244.231.159:42536
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_1_piece0 on namenode.lxd:36161 in memory (size: 5.0 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_1_piece0 on namenode.lxd:33879 in memory (size: 5.0 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_1_piece0 on datanode1.lxd:42741 in memory (size: 5.0 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_0_piece0 on namenode.lxd:33879 in memory (size: 5.6 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_0_piece0 on namenode.lxd:36161 in memory (size: 5.6 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_0_piece0 on datanode1.lxd:42741 in memory (size: 5.6 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_2_piece0 on namenode.lxd:36161 in memory (size: 6.7 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_2_piece0 on datanode1.lxd:42741 in memory (size: 6.7 KiB, free: 434.4 MiB)
+24/04/20 23:01:04 INFO BlockManagerInfo: Removed broadcast_2_piece0 on namenode.lxd:33879 in memory (size: 6.7 KiB, free: 434.4 MiB)
+24/04/20 23:01:05 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 48) in 1431 ms on namenode.lxd (executor 2) (1/1)
+24/04/20 23:01:05 INFO YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+24/04/20 23:01:05 INFO DAGScheduler: ResultStage 3 (take at SerDeUtil.scala:204) finished in 1.447 s
+24/04/20 23:01:05 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+24/04/20 23:01:05 INFO YarnScheduler: Killing all running tasks in stage 3: Stage finished
+24/04/20 23:01:05 INFO DAGScheduler: Job 2 finished: take at SerDeUtil.scala:204, took 2.725626 s
+24/04/20 23:01:05 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+24/04/20 23:01:05 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+24/04/20 23:01:05 INFO SparkContext: Starting job: runJob at SparkHadoopWriter.scala:83
+24/04/20 23:01:05 INFO DAGScheduler: Got job 3 (runJob at SparkHadoopWriter.scala:83) with 1 output partitions
+24/04/20 23:01:05 INFO DAGScheduler: Final stage: ResultStage 5 (runJob at SparkHadoopWriter.scala:83)
+24/04/20 23:01:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 4)
+24/04/20 23:01:05 INFO DAGScheduler: Missing parents: List()
+24/04/20 23:01:05 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[12] at map at PythonHadoopUtil.scala:185), which has no missing parents
+24/04/20 23:01:05 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 110.4 KiB, free 434.3 MiB)
+24/04/20 23:01:05 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 41.6 KiB, free 434.2 MiB)
+24/04/20 23:01:05 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on namenode.lxd:36161 (size: 41.6 KiB, free: 434.4 MiB)
+24/04/20 23:01:05 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1540
+24/04/20 23:01:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[12] at map at PythonHadoopUtil.scala:185) (first 15 tasks are for partitions Vector(0))
+24/04/20 23:01:05 INFO YarnScheduler: Adding task set 5.0 with 1 tasks resource profile 0
+24/04/20 23:01:05 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 49) (namenode.lxd, executor 2, partition 0, NODE_LOCAL, 7738 bytes) 
+24/04/20 23:01:05 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on namenode.lxd:33879 (size: 41.6 KiB, free: 434.4 MiB)
+24/04/20 23:01:06 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 49) in 1484 ms on namenode.lxd (executor 2) (1/1)
+24/04/20 23:01:06 INFO YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+24/04/20 23:01:06 INFO DAGScheduler: ResultStage 5 (runJob at SparkHadoopWriter.scala:83) finished in 1.502 s
+24/04/20 23:01:06 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+24/04/20 23:01:06 INFO YarnScheduler: Killing all running tasks in stage 5: Stage finished
+24/04/20 23:01:06 INFO DAGScheduler: Job 3 finished: runJob at SparkHadoopWriter.scala:83, took 1.510811 s
+24/04/20 23:01:06 INFO SparkHadoopWriter: Start to commit write Job job_202404202301057716042187302639372_0012.
+24/04/20 23:01:06 INFO SparkHadoopWriter: Write Job job_202404202301057716042187302639372_0012 committed. Elapsed time: 37 ms.
+24/04/20 23:01:06 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/04/20 23:01:06 INFO SparkUI: Stopped Spark web UI at http://namenode.lxd:4040
+24/04/20 23:01:07 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+24/04/20 23:01:07 INFO YarnClientSchedulerBackend: Shutting down all executors
+24/04/20 23:01:07 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+24/04/20 23:01:07 INFO YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+24/04/20 23:01:07 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/04/20 23:01:07 INFO MemoryStore: MemoryStore cleared
+24/04/20 23:01:07 INFO BlockManager: BlockManager stopped
+24/04/20 23:01:07 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/04/20 23:01:07 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/04/20 23:01:07 INFO SparkContext: Successfully stopped SparkContext
+24/04/20 23:01:07 INFO ShutdownHookManager: Shutdown hook called
+24/04/20 23:01:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-e7746b44-298b-4358-be64-753f63c4cae1
+24/04/20 23:01:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-f812c981-ad60-4ba6-b049-8d252af5ab26
+24/04/20 23:01:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-f812c981-ad60-4ba6-b049-8d252af5ab26/pyspark-05d817f4-1196-4358-8ea5-bc15aefc21ea
+
+root@namenode:~# python3 hdfs_hashverify1.py /user/root/spark_output/part-r-00000 -d true
+Read 68719476736 bytes and found all records are sorted.
